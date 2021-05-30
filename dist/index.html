@@ -10,6 +10,36 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="main.js" type="text/javascript"></script>
+    <form novalidate>
+        <label for="mail">
+            <span class="formFieldLabel">Email Address:</span>
+            <input type="email" id="mail" name="mail" minlength="8" required>
+            <span id="mailError" class="error" aria-live="polite"></span>
+        </label>
+        <lbael for="country">
+            <span class="formFieldLabel">Country of Origin:</span>
+            <input type="text" id="country" name="country" required>
+            <span id="countryError" class="error" aria-live="polite"></span>
+        </lbael>
+        <label for="postcode">
+            <span class="formFieldLabel">Postcode:</span>
+            <input type="text" id="postcode" name="postcode" 
+            pattern="([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})" 
+            required>
+            <span id="postcodeError" class="error" aria-live="polite"></span>
+        </label>
+        <label for="pass">
+            <span class="formFieldLabel">Enter your Password</span>
+            <input type="password" id="pass" name="pass" required>
+            <span id="passwordError" class="error" aria-live="polite"></span>
+        </label>
+        <label for="passConfirm">
+            <span class="formFieldLabel">Confirm your Password</span>
+            <input type="password" id="passConfirm" name="passConfirm" required>
+            <span id="passwordConfirmError" class="error" aria-live="polite"></span>
+        </label>
+        <button>Submit</button>
+    </form>
+<script src="main.js" type="text/javascript"></script>
 </body>
 </html>
