@@ -13,10 +13,41 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-form {
+#practiceForm {
     width: 500px;
     height: 750px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     border: 1px solid black;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+.formItemContainer {
+    width: 475px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.formFieldLabel {
+    width: 200px;
+}
+
+.formInput {
+    width: 271px;
+}
+
+.errorContainer {
+    width: 475px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.error {
+    width: 271px;
 }
