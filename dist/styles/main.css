@@ -24,6 +24,8 @@ body {
 
 h2 {
     font-weight: 500;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .formItemContainer {
@@ -32,6 +34,7 @@ h2 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .formFieldLabel {
@@ -50,4 +53,6 @@ h2 {
 
 .error {
     width: 271px;
+    display: flex;
+    justify-content: center;
 }

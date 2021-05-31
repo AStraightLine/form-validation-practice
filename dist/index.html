@@ -24,7 +24,7 @@
         <lbael for="country">
             <div class="formItemContainer">
                 <span class="formFieldLabel">Country of Origin:</span>
-                <input type="text" id="country" class="formInput" name="country" required>
+                <input type="text" id="country" class="formInput" name="country" minlength="1" pattern="[a-zA-Z]*" required>
                 <div class="errorContainer">
                     <span id="countryError" class="error" aria-live="polite"></span>
                 </div>
@@ -44,7 +44,7 @@
         <label for="pass">
             <div class="formItemContainer">
                 <span class="formFieldLabel">Enter your Password:</span>
-                <input type="password" id="pass" class="formInput" name="pass" required>
+                <input type="password" id="pass" class="formInput" name="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                 <div class="errorContainer">
                     <span id="passwordError" class="error" aria-live="polite"></span>
                 </div>
@@ -53,7 +53,7 @@
         <label for="passConfirm">
             <div class="formItemContainer">
                 <span class="formFieldLabel">Confirm your Password:</span>
-                <input type="password" id="passConfirm" class="formInput" name="passConfirm" required>
+                <input type="password" id="passConfirm" class="formInput" name="passConfirm" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                 <div class="errorContainer">
                     <span id="passwordConfirmError" class="error" aria-live="polite"></span>
                 </div>
