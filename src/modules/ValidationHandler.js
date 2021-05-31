@@ -1,3 +1,5 @@
+import { UI } from './UI'
+
 export const ValidationHandler = (() => {
 
     const _determineError = (input, typeString) => {
@@ -60,10 +62,34 @@ export const ValidationHandler = (() => {
         }
     };
 
-    const submitHandle = (form) => {
-        if (!(emailHandle() === true)) {
+    const submitHandle = (event, emailInput, countryInput, postcodeInput, passwordInput, passwordConfirmInput,
+        emailError, countryError, postcodeError, passwordError, passwordConfirmError) => {
 
+        if (emailHandle(emailInput) !== true) {
+            UI.displayError(emailError, emailHandle(emailInput));
+            event.preventDefault();
         }
+
+        if (countryHandle(countryInput) !== true) {
+            UI.displayError(countryError, countryHandle(countryInput));
+            event.preventDefault();
+        }
+
+        if (postcodeHandle(postcodeInput) !== true) {
+            UI.displayError(postcodeError, postcodeHandle(postcodeInput));
+            event.preventDefault();
+        }
+
+        if (passwordHandle(passwordInput) !== true) {
+            UI.displayError(passwordError, passwordHandle(passwordInput));
+            event.preventDefault();
+        }
+
+        if (passwordConfirmHandle(passwordConfirmInput, passwordInput) !== true) {
+            UI.displayError(passwordConfirmError, passwordConfirmHandle(passwordConfirmInput, passwordInput));
+            event.preventDefault();
+        }
+        
     };
 
     return {

@@ -29,7 +29,10 @@ export const UI = (() => {
         postcodeInput.addEventListener('blur', _handlePostcode);
         passwordInput.addEventListener('blur', _handlePassword);
         passwordConfirmInput.addEventListener('blur', _handlePasswordConfirm);
-        form.addEventListener('submit', _handleSubmit);
+
+        form.addEventListener('submit', function(event) {
+            _handleSubmit(event);
+        });
     };
 
     const displayError = (input, error) => {
@@ -81,8 +84,9 @@ export const UI = (() => {
         }
     };
 
-    const _handleSubmit = (form) => {
-        ValidationHandler.submitHandle(form);
+    const _handleSubmit = (event) => {
+        ValidationHandler.submitHandle(event, emailInput, countryInput, postcodeInput, passwordInput, passwordConfirmInput,
+            emailError, countryError, postcodeError, passwordError, passwordConfirmError);
     };
 
     return {
