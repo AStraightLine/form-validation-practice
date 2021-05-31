@@ -53,6 +53,13 @@ h2 {
 
 .error {
     width: 271px;
+    font-size: 0.9em;
+    color: white;
+    background-color: #FF5252;
     display: flex;
     justify-content: center;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-radius: 0 0 5px 5px;
 }
